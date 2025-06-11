@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    margin: 0;
+}
+
+.pizzaInfo--size.selected {
+    color: white;
+    background-color: oklch(55.3% 0.195 38.402);
+}
+
+.pizzaInfo--size.selected span {
+    color: #DDD;
+    font-weight: bold;
+}
+
+aside {
+    background-color: var(--color-gray-100);
+    width: 0vw;
+    position: fixed;
+    right: 0;
+    top: 97px;
+    bottom: 0;
+    transition: all ease .3s;
+    overflow-x: hidden;
+}
+
+@media (min-width: 1550px) {
+    aside.show {
+        width: 30vw;
+    }
+}
+
+
+@media (max-width: 1500px) and (min-width: 850px) {
+    aside.show {
+        width: 35vw;
+    }
+}
+
+@media (max-width:840px) {
+    aside {
+        width: 0vw;
+        position: fixed;
+        left: 100vw;
+        right: 0;
+        top: 97px;
+        bottom: 0;
+    }
+
+    aside.show {
+        width: 100%;
+    }
+}
